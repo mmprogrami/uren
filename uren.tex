@@ -1,22 +1,15 @@
 \documentclass[]{scrlttr2}
 \usepackage[style=iso]{datetime2}
 \usepackage{newcomputermodern}
-
-%\usepackage{fontspec}
-%%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-%\setmainfont{Andale Mono}
-
+\input{my.tex}
 \input{commands.tex}
-\setkomavar{signature}{Michiel Meeuwissen}
+\setkomavar{signature}{\me}
 \setkomavar{date}{\today}
 \setkomavar{subject}{Geregistreerde uren (\aboutmonth)}
-
 \begin{document}
   \begin{letter}{
-    MMProgrami\\
-    Groenekanseweg 88\\
-    3731 AJ \ DE BILT\\
-    Ordernummer: NP-30028502
+    \myaddress
+    \npoorder
   }
     \opening{}
     \urentable
