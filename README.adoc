@@ -1,0 +1,6 @@
+[source, bash]
+----
+mihxil@baleno:~$ python3 -m venv ~/venvs/mmprogrami-env
+mihxil@baleno:~$ source ~/venvs/mmprogrami-env/bin/activate
+(pyapi-env) mihxil@baleno:~$ pip3 install --upgrade  .
+----
