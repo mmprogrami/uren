@@ -1,4 +1,4 @@
-MONTH:=2025-april
+MONTH:=$(shell LC_TIME=nl_NL gdate -d '-30 days' +'%Y-%B')
 
 SPLIT=$(subst -, ,$(MONTH))
 TOYEAR=$(word 1, $(SPLIT))
