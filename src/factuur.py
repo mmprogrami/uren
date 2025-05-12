@@ -5,7 +5,8 @@ from pylatex import Tabular
 
 from base_uren import BaseUren
 
-class Uren(BaseUren):
+
+class Factuur(BaseUren):
 
 
     def generate_latex_table(self, sheet):
@@ -35,4 +36,4 @@ class Uren(BaseUren):
 
 
 
-Uren().report(sys.argv[1], sys.argv[2])
+Factuur().report(sys.argv[1], sys.argv[2])

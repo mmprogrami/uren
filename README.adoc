@@ -1,6 +1,42 @@
+
+
+
+I used to use e-boekhouden.nl, but it boils down to working around a lot of stuff, and then still having to things manually.
+
+So I came up with this (wip).
+
+Just use google sheet as my GUI and database, and these scripts to the needed pdfs.
+
+
+== set up
 [source, bash]
 ----
 mihxil@baleno:~$ python3 -m venv ~/venvs/mmprogrami-env
 mihxil@baleno:~$ source ~/venvs/mmprogrami-env/bin/activate
-(pyapi-env) mihxil@baleno:~$ pip3 install --upgrade  .
+(pyapi-env) mihxil@baleno:~$ pip3 install --upgrade
 ----
+
+
+== uren
+
+- Using `src/uren.py` to make a `table.tex`, which is included in `uren.tex`, which generates the pdf.
+[source, bash]
+----
+(mmprogrami-env) michiel@mitulo:(main,8)~/github/mmprogrami/uren$ make MONTH=2025-april uren
+python src/uren.py 2025 april > 2025-april.tex
+INFO:root:Generating spread 2025 april
+ln -sf 2025-april.tex table.tex
+printf '\\newcommand{\\aboutmonth}{april 2025}' > commands.tex
+mkdir -p texout
+....
+
+mv -f texout/uren.pdf 2025-april-uren.pdf
+rm commands.tex table.tex
+(mmprogrami-env) michiel@mitulo:(main,10)~/github/mmprogrami/uren$ open 2025-april-uren.pdf
+
+----
+== factuur
+
+todo
+
+
