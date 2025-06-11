@@ -7,7 +7,7 @@ TOMONTH=$(word 2, $(SPLIT))
 UREN_TEX=$(MONTH)-uren.table.tex
 FACTUUR_TEX=$(MONTH)-factuur.table.tex
 
-DRIVE=/Users/michiel/Library/CloudStorage/GoogleDrive-michiel.mmprogrami@gmail.com/My\ Drive/$(CLIENT)/
+DRIVE=/Users/michiel/Library/CloudStorage/GoogleDrive-michiel.mmprogrami@gmail.com/My\ Drive/$(CLIENT)
 
 ORDERNUMBER=NP-30028502
 export ORDERNUMBER
@@ -53,7 +53,7 @@ commands.tex: Makefile
 
 
 clean:
-	rm -rf texout $(MONTH)-uren.table.tex $(MONTH)-uren.pdf
+	rm -rf texout $(MONTH)-uren.table.tex $(MONTH)-uren.pdf commands.tex
 
 help:     ## Show this help.
 	@echo "Find relevant sheet at https://docs.google.com/spreadsheets/d/1_c9zqs-9-ke2ez2E8bfhVRl1q0crhuKxrao2XrYrtp8/edit?gid=1711645104#gid=1711645104"
