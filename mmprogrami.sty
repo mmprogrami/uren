@@ -1,0 +1,21 @@
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\@title}
+
+  \@author
+\end{flushleft}\egroup
+}
+\newcommand{\fromname}{MMProgrami}
+\newcommand{\fromaddress}{Groenekanseweg 88\\
+3731 AJ \ DE BILT %
+}
+\newcommand{\ordernumber}{
+  Ordernummer: \directlua{tex.print(os.getenv("ORDERNUMBER"))} %
+}
+\newcommand{\me} {
+  Michiel Meeuwissen %
+}
+
+\newcommand{\NPOaddress}{NPO\\
+ tav Hajo de Visser \& Camiel van Burik %
+}

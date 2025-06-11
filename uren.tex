@@ -1,18 +1,27 @@
-\documentclass[]{scrlttr2}
+\documentclass{memoir}
+\usepackage{tabularx}
 \usepackage[style=iso]{datetime2}
 \usepackage{newcomputermodern}
-\input{my.tex}
-\input{commands.tex}
-\setkomavar{signature}{\me}
-\setkomavar{date}{\today}
-\setkomavar{subject}{Geregistreerde uren (\aboutmonth)}
+\usepackage{mmprogrami}
+\pagenumbering{gobble}
+\input{commands}
+\title{Geregistreerde uren (\aboutmonth)}
+\author{
+  \b {\fromname \\
+      \fromaddress \\
+  \ordernumber}
+}
 \begin{document}
-  \begin{letter}{
-    \myaddress
-    \npoorder
-  }
-    \opening{}
-    \urentable
-		\closing{Met vriendelijke groet,}
-  \end{letter}
+  \maketitle
+
+  \urentable
+
+  \vspace{1cm}
+
+  Akkoord
+
+  \vspace*{1.5cm}
+
+  H.A de Visser
+
 \end{document}
